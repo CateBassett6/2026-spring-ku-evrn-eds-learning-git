@@ -6,14 +6,11 @@ format: html
 
 ## Introduction 
 
-This analysis will look at vegetation data from the Konza National Ecological 
-Observatory Network (NEON) site located near Manhattan, KS. It will use 
-tidyverse packages to wrangle and visualize some of the data. 
+This analysis will look at vegetation data from the Konza National Ecological Observatory Network (NEON) site located near Manhattan, KS. It will use tidyverse packages to wrangle and visualize some of the data. 
 
 ## Loading the data 
 
-The data are provided in csv files. We'll use the tidyverse package `readr` to 
-load it into R. 
+The data are provided in csv files. We'll use the tidyverse package `readr` to load it into R. 
 
 ```{r}
 #| label: read-csv 
@@ -41,8 +38,7 @@ konza_data %>%
   arrange(desc(n))
 ```
 
-This analysis showed that Poaceae and Asteraceae are among the most common family 
-found in these plots. 
+This analysis showed that Poaceae and Asteraceae are among the most common family found in these plots. 
 
 ```{r}
 #| label: mean-pcnt-cover-by-family
@@ -54,4 +50,6 @@ konza_data %>%
             sd_pcnt_cover = sd(percentCover)) %>% 
   arrange(desc(mean_pcnt_cover))
 ```
+
+This analysis showed that the largest percent vocer is the `NA` taxa, which means it likely wasn't able to be identified, but the highest mean percent cover at 16& across the plots was Fagaceae. 
 
