@@ -23,5 +23,17 @@ library("readr")
 library("dplyr")
 library("ggplot2")
 
+# read in the data 
+konza_data <- read_csv("data/NEON.D06.KONZ.DP1.10058.001.div_1m2Data.2025-08.basic.20251222T234053Z.csv")
+```
+
+## Data summarizing with `dplyr`
+
+We'll next use the dplyr package to summarize some different aspects of the data. 
+
+```{r}
+#| label: summarize-with-dplyr
+
+# first summary to make will be 
 ```
 
