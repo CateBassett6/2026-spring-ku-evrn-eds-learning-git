@@ -95,7 +95,7 @@ konza_data %>%
        x = "Elevation")
 ```
 
-This figure visualizes the 
+This figure visualizes the Fagaceae family in relation to elevation and percent cover. 
 ```{r}
 #| label: elevation-percent-by-family
 
@@ -110,8 +110,9 @@ konza_data %>%
        y = "Percent Cover", 
        x = "Elevation")
 ```
+This figure shows that the percent cover of Fagaceae stays the same, while the elevation increases. 
 
-The purpose of this figure is to visualize the Poaceae, which is the the family with the highest land coverage. 
+The purpose of this figure is to visualize the Poaceae, which is the the family with the highest land coverage in percent of land coverage. 
 ```{r}
 #| label: family-and-percent-cover
 
@@ -119,15 +120,31 @@ konza_data %>%
   filter(!is.na(family)) %>%
   filter(family == "Poaceae") %>%
   ggplot() + 
-  geom_boxplot(aes(x = family, 
+  geom_boxplot(aes(x = elevation, 
                    y = percentCover, 
                    group = elevation)) + 
   labs(title = "Cover of Poaceae by Elevation", 
        y = "Percent Cover", 
-       x = "Family")
+       x = "Elevation")
 ```
+The figure shows that the Poaceae has a very high percent cover in the higher elevation.
 
-family and mean percent cover
+This figure will show the Solanaceae, which has the smallest observations in relation to percent cover and elevation
+```{r}
+#| label: family-and-percent-cover
+
+konza_data %>% 
+  filter(!is.na(family)) %>%
+  filter(family == "Cornaceae") %>%
+  ggplot() + 
+  geom_boxplot(aes(x = elevation,
+                   y = percentCover, 
+                   group = elevation)) + 
+  labs(title = "Cover of Solanaceae by Elevation", 
+       y = "Percent Cover", 
+       x = "Elevation")
+```
+The purpose of this is to see if there is a difference in a family that has a low count in relation to elevation. 
 
   
 ## Next steps 
