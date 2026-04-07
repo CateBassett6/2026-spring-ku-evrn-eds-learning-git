@@ -258,59 +258,450 @@ date  (1): endDate
 </div>
 <p>This analysis showed that Poaceae and Asteraceae are among the most common family found in these plots.</p>
 <div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 33 × 3
-   family        mean_pcnt_cover sd_pcnt_cover
-   &lt;chr&gt;                   &lt;dbl&gt;         &lt;dbl&gt;
- 1 &lt;NA&gt;                    21.4          33.9 
- 2 Fagaceae                16            NA   
- 3 Cornaceae                6.75          4.41
- 4 Poaceae                  5.28          9.37
- 5 Fabaceae                 4.81          7.10
- 6 Ulmaceae                 4             1.41
- 7 Rhamnaceae               3.8           3.11
- 8 Anacardiaceae            3.75          1.5 
- 9 Asteraceae               2.51          4.72
-10 Rosaceae                 2.33          1.53
-# ℹ 23 more rows</code></pre>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">family</th>
+<th style="text-align: right;">mean_pcnt_cover</th>
+<th style="text-align: right;">sd_pcnt_cover</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">21.3938053</td>
+<td style="text-align: right;">33.8664955</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Fagaceae</td>
+<td style="text-align: right;">16.0000000</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Cornaceae</td>
+<td style="text-align: right;">6.7500000</td>
+<td style="text-align: right;">4.4133063</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Poaceae</td>
+<td style="text-align: right;">5.2796610</td>
+<td style="text-align: right;">9.3729795</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Fabaceae</td>
+<td style="text-align: right;">4.8139535</td>
+<td style="text-align: right;">7.0962962</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Ulmaceae</td>
+<td style="text-align: right;">4.0000000</td>
+<td style="text-align: right;">1.4142136</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Rhamnaceae</td>
+<td style="text-align: right;">3.8000000</td>
+<td style="text-align: right;">3.1144823</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Anacardiaceae</td>
+<td style="text-align: right;">3.7500000</td>
+<td style="text-align: right;">1.5000000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Asteraceae</td>
+<td style="text-align: right;">2.5135135</td>
+<td style="text-align: right;">4.7224130</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Rosaceae</td>
+<td style="text-align: right;">2.3333333</td>
+<td style="text-align: right;">1.5275252</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Boraginaceae</td>
+<td style="text-align: right;">2.0000000</td>
+<td style="text-align: right;">2.5980762</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Celastraceae</td>
+<td style="text-align: right;">2.0000000</td>
+<td style="text-align: right;">1.4142136</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Lythraceae</td>
+<td style="text-align: right;">2.0000000</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Rutaceae</td>
+<td style="text-align: right;">2.0000000</td>
+<td style="text-align: right;">1.4142136</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Santalaceae</td>
+<td style="text-align: right;">2.0000000</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Cyperaceae</td>
+<td style="text-align: right;">1.6176471</td>
+<td style="text-align: right;">1.5565327</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Lamiaceae</td>
+<td style="text-align: right;">1.4285714</td>
+<td style="text-align: right;">0.9322272</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Solanaceae</td>
+<td style="text-align: right;">1.2857143</td>
+<td style="text-align: right;">0.9063270</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Apiaceae</td>
+<td style="text-align: right;">1.0000000</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Asclepiadaceae</td>
+<td style="text-align: right;">1.0000000</td>
+<td style="text-align: right;">1.2792043</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Verbenaceae</td>
+<td style="text-align: right;">1.0000000</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Rubiaceae</td>
+<td style="text-align: right;">0.8750000</td>
+<td style="text-align: right;">0.7500000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Acanthaceae</td>
+<td style="text-align: right;">0.6666667</td>
+<td style="text-align: right;">0.2886751</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Oxalidaceae</td>
+<td style="text-align: right;">0.6666667</td>
+<td style="text-align: right;">0.2886751</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Euphorbiaceae</td>
+<td style="text-align: right;">0.6538462</td>
+<td style="text-align: right;">0.4274252</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Caprifoliaceae</td>
+<td style="text-align: right;">0.6250000</td>
+<td style="text-align: right;">0.2500000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Violaceae</td>
+<td style="text-align: right;">0.6000000</td>
+<td style="text-align: right;">0.2236068</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Cupressaceae</td>
+<td style="text-align: right;">0.5000000</td>
+<td style="text-align: right;">0.0000000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Cuscutaceae</td>
+<td style="text-align: right;">0.5000000</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Linaceae</td>
+<td style="text-align: right;">0.5000000</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Nyctaginaceae</td>
+<td style="text-align: right;">0.5000000</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Onagraceae</td>
+<td style="text-align: right;">0.5000000</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Polygalaceae</td>
+<td style="text-align: right;">0.5000000</td>
+<td style="text-align: right;">NA</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 <p>This analysis showed that the largest percent vocer is the <code>NA</code> taxa, which means it likely wasn’t able to be identified, but the highest mean percent cover at 16&amp; across the plots was Fagaceae.</p>
 <div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 21 × 3
-   family     mean_pcnt_cover sd_pcnt_cover
-   &lt;chr&gt;                &lt;dbl&gt;         &lt;dbl&gt;
- 1 &lt;NA&gt;                 23.6         37.6  
- 2 Fabaceae              5.98         8.26 
- 3 Poaceae               5.68        11.7  
- 4 Cornaceae             4.62         3.02 
- 5 Asteraceae            4.22         6.88 
- 6 Rutaceae              3           NA    
- 7 Rosaceae              2.33         1.53 
- 8 Lythraceae            2           NA    
- 9 Cyperaceae            1.45         1.52 
-10 Lamiaceae             1.43         0.932
-# ℹ 11 more rows</code></pre>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">family</th>
+<th style="text-align: right;">mean_pcnt_cover</th>
+<th style="text-align: right;">sd_pcnt_cover</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">23.6372549</td>
+<td style="text-align: right;">37.5739376</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Fabaceae</td>
+<td style="text-align: right;">5.9807692</td>
+<td style="text-align: right;">8.2649631</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Poaceae</td>
+<td style="text-align: right;">5.6785714</td>
+<td style="text-align: right;">11.6656425</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Cornaceae</td>
+<td style="text-align: right;">4.6250000</td>
+<td style="text-align: right;">3.0207615</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Asteraceae</td>
+<td style="text-align: right;">4.2166667</td>
+<td style="text-align: right;">6.8778547</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Rutaceae</td>
+<td style="text-align: right;">3.0000000</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Rosaceae</td>
+<td style="text-align: right;">2.3333333</td>
+<td style="text-align: right;">1.5275252</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Lythraceae</td>
+<td style="text-align: right;">2.0000000</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Cyperaceae</td>
+<td style="text-align: right;">1.4545455</td>
+<td style="text-align: right;">1.5240496</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Lamiaceae</td>
+<td style="text-align: right;">1.4285714</td>
+<td style="text-align: right;">0.9322272</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Solanaceae</td>
+<td style="text-align: right;">1.2857143</td>
+<td style="text-align: right;">0.9063270</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Verbenaceae</td>
+<td style="text-align: right;">1.0000000</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Caprifoliaceae</td>
+<td style="text-align: right;">0.7500000</td>
+<td style="text-align: right;">0.3535534</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Oxalidaceae</td>
+<td style="text-align: right;">0.7500000</td>
+<td style="text-align: right;">0.3535534</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Acanthaceae</td>
+<td style="text-align: right;">0.6666667</td>
+<td style="text-align: right;">0.2886751</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Asclepiadaceae</td>
+<td style="text-align: right;">0.6250000</td>
+<td style="text-align: right;">0.2500000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Cuscutaceae</td>
+<td style="text-align: right;">0.5000000</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Euphorbiaceae</td>
+<td style="text-align: right;">0.5000000</td>
+<td style="text-align: right;">0.0000000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Linaceae</td>
+<td style="text-align: right;">0.5000000</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Nyctaginaceae</td>
+<td style="text-align: right;">0.5000000</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Violaceae</td>
+<td style="text-align: right;">0.5000000</td>
+<td style="text-align: right;">NA</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 <p>Next we’ll learn to use <code>mutate()</code>, which is a function to create a new column based on contents from an existing column.</p>
 <div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 468 × 4
-   scientificName                           family     percentCover propCover
-   &lt;chr&gt;                                    &lt;chr&gt;             &lt;dbl&gt;     &lt;dbl&gt;
- 1 Schizachyrium scoparium (Michx.) Nash    Poaceae             7       0.07 
- 2 Lespedeza violacea (L.) Pers.            Fabaceae            8       0.08 
- 3 Lespedeza capitata Michx.                Fabaceae            1       0.01 
- 4 &lt;NA&gt;                                     &lt;NA&gt;                2       0.02 
- 5 Sporobolus heterolepis (A. Gray) A. Gray Poaceae             4       0.04 
- 6 Andropogon gerardii Vitman               Poaceae            10       0.1  
- 7 Dalea candida Michx. ex Willd.           Fabaceae            0.5     0.005
- 8 Sorghastrum nutans (L.) Nash             Poaceae             5       0.05 
- 9 Brickellia eupatorioides (L.) Shinners   Asteraceae          3       0.03 
-10 Amorpha canescens Pursh                  Fabaceae            2       0.02 
-# ℹ 458 more rows</code></pre>
+<div class="cell-output cell-output-stderr">
+<pre><code>Selecting by propCover</code></pre>
+</div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 56%">
+<col style="width: 11%">
+<col style="width: 18%">
+<col style="width: 13%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">scientificName</th>
+<th style="text-align: left;">family</th>
+<th style="text-align: right;">percentCover</th>
+<th style="text-align: right;">propCover</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">93</td>
+<td style="text-align: right;">0.93</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">95</td>
+<td style="text-align: right;">0.95</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">95</td>
+<td style="text-align: right;">0.95</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">91</td>
+<td style="text-align: right;">0.91</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">89</td>
+<td style="text-align: right;">0.89</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">94</td>
+<td style="text-align: right;">0.94</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">87</td>
+<td style="text-align: right;">0.87</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">91</td>
+<td style="text-align: right;">0.91</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">96</td>
+<td style="text-align: right;">0.96</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">88</td>
+<td style="text-align: right;">0.88</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">80</td>
+<td style="text-align: right;">0.80</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">82</td>
+<td style="text-align: right;">0.82</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">81</td>
+<td style="text-align: right;">0.81</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">92</td>
+<td style="text-align: right;">0.92</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">94</td>
+<td style="text-align: right;">0.94</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">90</td>
+<td style="text-align: right;">0.90</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">93</td>
+<td style="text-align: right;">0.93</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Sporobolus heterolepis (A. Gray) A. Gray</td>
+<td style="text-align: left;">Poaceae</td>
+<td style="text-align: right;">94</td>
+<td style="text-align: right;">0.94</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">83</td>
+<td style="text-align: right;">0.83</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">89</td>
+<td style="text-align: right;">0.89</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 <p>Next up, we’ll use <code>ggplot2</code> to make some figures!</p>
@@ -333,6 +724,39 @@ date  (1): endDate
 <li>Follow up on the really high percent cover values. Maybe say &gt; 25%?</li>
 </ol>
 <p>Looks like it is mostly soil and dead plant matter.</p>
+<p>This figure visualizes the Fagaceae family in relation to elevation and percent cover.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Konza_analysis_files/figure-html/elevation-percent-by-family-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>This figure shows that the percent cover of Fagaceae stays the same, while the elevation increases.</p>
+<p>The purpose of this figure is to visualize the Poaceae, which is the the family with the highest land coverage in percent of land coverage.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Konza_analysis_files/figure-html/family-and-percent-cover-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The figure shows that the Poaceae has a very high percent cover in the higher elevation.</p>
+<p>This figure will show the Solanaceae, which has the smallest observations in relation to percent cover and elevation</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Konza_analysis_files/figure-html/family-and-percent-cover-through-elevation-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The purpose of this is to see if there is a difference in a family that has a low count in relation to elevation.</p>
 </section>
 <section id="next-steps-1" class="level2">
 <h2 class="anchored" data-anchor-id="next-steps-1">Next steps</h2>

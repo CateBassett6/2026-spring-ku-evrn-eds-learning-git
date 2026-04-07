@@ -148,7 +148,7 @@ The figure shows that the Poaceae has a very high percent cover in the higher el
 
 This figure will show the Solanaceae, which has the smallest observations in relation to percent cover and elevation
 ```{r}
-#| label: family-and-percent-cover
+#| label: family-and-percent-cover-through-elevation
 
 konza_data %>% 
   filter(!is.na(family)) %>%
